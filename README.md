@@ -1,25 +1,27 @@
-# CREDAI Website Concept
+# CREDAI Kurnool Website Concept
 
-A responsive static website concept built with plain HTML, CSS, and JavaScript.
+Responsive property-discovery landing page built with plain HTML, CSS and JavaScript to follow the supplied wireframe.
 
 ## Files
-- `index.html` — page content and structure
-- `styles.css` — layout, typography, responsive styles
-- `script.js` — mobile navigation and dynamic copyright year
+- `index.html` — page content and sections
+- `styles.css` — layout, colors, cards and responsive styling
+- `script.js` — mobile navigation, project filters, Buy/Rent tabs, map/list view and card controls
 
 ## Run locally
-Open `index.html` in a browser.
+Open `index.html` in a browser. Internet access is required for the remote Unsplash images and Google Fonts.
 
-## Deploy with GitHub Pages
-1. Create a GitHub repository, for example `credai-website`.
-2. Upload `index.html`, `styles.css`, `script.js`, and this README to the repository root.
-3. In GitHub, open **Settings → Pages**.
-4. Under **Build and deployment**, select **Deploy from a branch**.
-5. Select branch `main` and folder `/ (root)`, then save.
-6. Wait for GitHub Pages to publish and open the URL shown in the Pages settings.
+## Deploy to GitHub Pages
+1. Upload all files to the root of your GitHub repository.
+2. Open **Settings → Pages**.
+3. Under **Build and deployment**, choose **Deploy from a branch**.
+4. Choose branch `main` and folder `/ (root)`, then save.
 
-## Deploy with Azure Static Web Apps
-Use Build Preset `HTML`, App location `/`, API location blank, and Output location `/` when the three website files are in the repository root.
+## Deploy to Azure Static Web Apps
+For the current plain HTML site use:
+- Build preset: `HTML`
+- App location: `/`
+- API location: leave blank
+- Output location: `/`
 
 ## Before publishing
-This is a design concept, not an official CREDAI website. Verify authorization to use the CREDAI name/logo, replace placeholder insight cards and contact details with approved information, and verify all legal notices and brand assets before publishing. The current site is static and does not include a document-upload backend.
+This is a design concept and is not an official CREDAI Kurnool website. Verify permission to use the CREDAI name and brand assets. Project names, builders, contact details, news, statuses, locations and other listings are placeholders for demonstration; replace with approved, accurate information. The map is a visual mockup, not a live map service. The project filters operate on the sample cards included in this page. The site does not yet include a database, document upload, listing management, or an admin portal.
