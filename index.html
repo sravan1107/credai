@@ -15,8 +15,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="#home" aria-label="CREDAI Kurnool home">
-        <span class="brand-icon" aria-hidden="true"><span></span><span></span><span></span></span>
-        <span class="brand-name">CREDAI<small>KURNOOL</small></span>
+        <img class="credai-logo credai-logo-header" src="/Assets/logo.png" alt="CREDAI Kurnool Chapter">
       </a>
       <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
       <nav class="nav" aria-label="Main navigation">
@@ -26,7 +25,7 @@
         <a href="#about">About CREDAI</a>
         <a href="#news">News & Events</a>
         <a href="#contact">Contact Us</a>
-        <a class="nav-list" href="#contact">List Your Project <span>↗</span></a>
+        <a class="nav-list" href="#contact">List Your Project </a>
       </nav>
       <a class="search-shortcut" href="#property-search" aria-label="Jump to property search">⌕</a>
     </div>
@@ -42,7 +41,7 @@
           <h1>Find Your<br>Dream Property<br>in Kurnool</h1>
           <p class="hero-description">Explore residential apartments, villas, plots and commercial properties from trusted CREDAI Kurnool member developers.</p>
           <div class="hero-buttons">
-            <a href="#projects" class="button button-green">Explore Properties <span>↗</span></a>
+            <a href="#projects" class="button button-green">Explore Properties </a>
             <a href="#about" class="button button-glass">About CREDAI</a>
           </div>
         </div>
@@ -50,7 +49,6 @@
         <div class="property-search" id="property-search">
           <div class="search-tabs" role="tablist" aria-label="Property intent">
             <button class="search-tab active" type="button" data-intent="Buy" role="tab" aria-selected="true">Buy</button>
-            <button class="search-tab" type="button" data-intent="Rent" role="tab" aria-selected="false">Rent</button>
           </div>
           <form id="search-form" class="search-form">
             <label>Property Type
@@ -74,9 +72,10 @@
             <label>Budget
               <select id="property-budget" aria-label="Budget">
                 <option value="all">Any Budget</option>
-                <option value="under50">Under ₹50 lakh</option>
-                <option value="50to100">₹50 lakh – ₹1 crore</option>
-                <option value="over100">Above ₹1 crore</option>
+                <option value="under20">Under ₹20 lakh</option>
+                <option value="20to40">₹20 lakh – ₹40 lakh</option>
+                <option value="40to80">₹40 lakh – ₹80 lakh</option>
+                <option value="over80">Above ₹80 lakh</option>
               </select>
             </label>
             <label>Status
@@ -96,36 +95,73 @@
 
     <section class="category-strip" aria-label="Property categories">
       <div class="container category-grid">
-        <a class="category-card" href="#projects" data-category="Apartments"><span class="category-icon">▥</span><span><strong>Apartments</strong><small>Modern living spaces<br>for every family</small></span><b>↗</b></a>
-        <a class="category-card" href="#projects" data-category="Villas"><span class="category-icon">⌂</span><span><strong>Villas</strong><small>Spacious homes for<br>a better lifestyle</small></span><b>↗</b></a>
-        <a class="category-card" href="#projects" data-category="Plots"><span class="category-icon">▧</span><span><strong>Plots</strong><small>Invest in Kurnool's<br>growing future</small></span><b>↗</b></a>
-        <a class="category-card" href="#projects" data-category="Commercial"><span class="category-icon">▤</span><span><strong>Commercial</strong><small>Business spaces<br>for new opportunities</small></span><b>↗</b></a>
+        <a class="category-card" href="#projects" data-category="Apartments"><span class="category-icon">▥</span><span><strong>Apartments</strong><small>Modern living spaces<br>for every family</small></span></a>
+        <a class="category-card" href="#projects" data-category="Villas"><span class="category-icon">⌂</span><span><strong>Villas</strong><small>Spacious homes for<br>a better lifestyle</small></span></a>
+        <a class="category-card" href="#projects" data-category="Plots"><span class="category-icon">▧</span><span><strong>Plots</strong><small>Invest in Kurnool's<br>growing future</small></span></a>
+        <a class="category-card" href="#projects" data-category="Commercial"><span class="category-icon">▤</span><span><strong>Commercial</strong><small>Business spaces<br>for new opportunities</small></span></a>
       </div>
     </section>
 
     <section class="projects section-space" id="projects">
       <div class="container">
         <div class="section-heading">
-          <div><p class="eyebrow">FEATURED PROJECTS</p><h2>Premium Projects in Kurnool</h2><p class="section-subtitle">Handpicked projects from our member builders</p></div>
-          <div class="heading-actions"><a class="text-link" href="#property-search">View All Projects <span>↗</span></a><button class="circle-button" id="projects-prev" aria-label="Previous projects">‹</button><button class="circle-button" id="projects-next" aria-label="Next projects">›</button></div>
+          <div>
+            <p class="eyebrow">FEATURED PROJECTS</p>
+            <h2>Premium Projects in Kurnool</h2>
+            <p class="section-subtitle">Handpicked projects from our member builders</p>
+          </div>
+          <div class="heading-actions">
+            <a class="text-link" href="#property-search">View All Projects </a>
+            <button class="circle-button" id="projects-prev" type="button" aria-label="Previous project">‹</button>
+            <button class="circle-button" id="projects-next" type="button" aria-label="Next project">›</button>
+          </div>
         </div>
-        <div class="project-grid" id="project-grid">
+        <div class="project-grid project-carousel" id="project-grid"
+             role="region" aria-label="Premium projects in Kurnool" tabindex="0">
           <article class="project-card" data-type="Apartments" data-location="Nandyal Road" data-budget="50to100" data-status="Under Construction">
             <div class="project-photo photo-one"><span class="project-badge">Featured</span></div>
-            <div class="project-info"><h3>Sree Vista Heights</h3><p class="builder-by">By Sree Developers</p><p class="location-line">⌖ Nandyal Road, Kurnool</p><div class="project-meta"><span>▥ Apartments</span><span>▦ 2, 3 BHK</span><span>₹ Price on Request</span></div><div class="project-bottom"><span class="status">Under Construction</span><a href="#contact" class="small-button">View Project <span>↗</span></a></div></div>
+            <div class="project-info">
+              <p class="builder-by">SREE DEVELOPERS</p>
+              <h3>Sree Vista Heights</h3>
+              <p class="location-line">⌖ Nandyal Road, Kurnool</p>
+              <div class="project-meta"><span>▥ Apartments</span><span>▦ 2, 3 BHK</span><span>₹ Price on Request</span></div>
+              <div class="project-bottom"><span class="status">Under Construction</span><a href="#contact" class="small-button">View Project </a></div>
+            </div>
           </article>
           <article class="project-card" data-type="Villas" data-location="Orvakal" data-budget="over100" data-status="Upcoming">
             <div class="project-photo photo-two"><span class="project-badge badge-gold">New Launch</span></div>
-            <div class="project-info"><h3>Green Valley Villas</h3><p class="builder-by">By ABC Constructions</p><p class="location-line">⌖ Orvakal, Kurnool</p><div class="project-meta"><span>⌂ Villas</span><span>▦ 3, 4 BHK</span><span>₹ Price on Request</span></div><div class="project-bottom"><span class="status status-blue">Upcoming</span><a href="#contact" class="small-button">View Project <span>↗</span></a></div></div>
+            <div class="project-info">
+              <p class="builder-by">ABC CONSTRUCTIONS</p>
+              <h3>Green Valley Villas</h3>
+              <p class="location-line">⌖ Orvakal, Kurnool</p>
+              <div class="project-meta"><span>⌂ Villas</span><span>▦ 3, 4 BHK</span><span>₹ Price on Request</span></div>
+              <div class="project-bottom"><span class="status status-blue">Upcoming</span><a href="#contact" class="small-button">View Project </a></div>
+            </div>
           </article>
           <article class="project-card" data-type="Apartments" data-location="B-Camp" data-budget="50to100" data-status="Ready to Move">
             <div class="project-photo photo-three"><span class="project-badge badge-green">Ready to Move</span></div>
-            <div class="project-info"><h3>Royal Enclave</h3><p class="builder-by">By Sai Priya Builders</p><p class="location-line">⌖ B-Camp, Kurnool</p><div class="project-meta"><span>▥ Apartments</span><span>▦ 2, 3 BHK</span><span>₹ Price on Request</span></div><div class="project-bottom"><span class="status status-green">Ready to Move</span><a href="#contact" class="small-button">View Project <span>↗</span></a></div></div>
+            <div class="project-info">
+              <p class="builder-by">SAI PRIYA BUILDERS</p>
+              <h3>Royal Enclave</h3>
+              <p class="location-line">⌖ B-Camp, Kurnool</p>
+              <div class="project-meta"><span>▥ Apartments</span><span>▦ 2, 3 BHK</span><span>₹ Price on Request</span></div>
+              <div class="project-bottom"><span class="status status-green">Ready to Move</span><a href="#contact" class="small-button">View Project </a></div>
+            </div>
           </article>
           <article class="project-card" data-type="Villas" data-location="Collector Office" data-budget="under50" data-status="Under Construction">
             <div class="project-photo photo-four"><span class="project-badge">Featured</span></div>
-            <div class="project-info"><h3>Kurnool Meadows</h3><p class="builder-by">By Vardhan Developers</p><p class="location-line">⌖ Allipuram, Kurnool</p><div class="project-meta"><span>⌂ Residential Plots</span><span>▦ Varied Sizes</span><span>₹ Price on Request</span></div><div class="project-bottom"><span class="status">Under Development</span><a href="#contact" class="small-button">View Project <span>↗</span></a></div></div>
+            <div class="project-info">
+              <p class="builder-by">VARDHAN DEVELOPERS</p>
+              <h3>Kurnool Meadows</h3>
+              <p class="location-line">⌖ Allipuram, Kurnool</p>
+              <div class="project-meta"><span>⌂ Residential Plots</span><span>▦ Varied Sizes</span><span>₹ Price on Request</span></div>
+              <div class="project-bottom"><span class="status">Under Development</span><a href="#contact" class="small-button">View Project </a></div>
+            </div>
           </article>
+        </div>
+        <div class="project-carousel-footer">
+          <div class="project-dots" id="project-dots" aria-label="Choose a project"></div>
+          <span class="project-count" id="project-count" aria-live="polite">01 / 04</span>
         </div>
         <p class="results-message" id="results-message" aria-live="polite"></p>
       </div>
@@ -143,7 +179,7 @@
             <div class="map-zoom"><button aria-label="Zoom in">+</button><button aria-label="Zoom out">−</button></div>
           </div>
         </div>
-        <div class="map-copy"><p class="eyebrow">EXPLORE ON MAP</p><h2>Discover Projects<br>Across Kurnool</h2><p>Explore member projects on an interactive map. Find properties near schools, hospitals, transport and key locations.</p><a class="button button-green" href="#projects">Explore Projects <span>↗</span></a><div class="nearby-grid"><div><span>♧</span><strong>Schools</strong><small>Nearby</small></div><div><span>✚</span><strong>Hospitals</strong><small>Nearby</small></div><div><span>▦</span><strong>Shopping</strong><small>& Lifestyle</small></div><div><span>⇄</span><strong>Transport</strong><small>Connectivity</small></div></div></div>
+        <div class="map-copy"><p class="eyebrow">EXPLORE ON MAP</p><h2>Discover Projects<br>Across Kurnool</h2><p>Explore member projects on an interactive map. Find properties near schools, hospitals, transport and key locations.</p><a class="button button-green" href="#projects">Explore Projects </a><div class="nearby-grid"><div><span>♧</span><strong>Schools</strong><small>Nearby</small></div><div><span>✚</span><strong>Hospitals</strong><small>Nearby</small></div><div><span>▦</span><strong>Shopping</strong><small>& Lifestyle</small></div><div><span>⇄</span><strong>Transport</strong><small>Connectivity</small></div></div></div>
       </div>
     </section>
 
@@ -151,7 +187,7 @@
       <div class="container">
         <div class="section-heading">
           <div><p class="eyebrow">OUR MEMBERS</p><h2>Trusted Builders. Stronger Kurnool.</h2><p class="section-subtitle">Explore our member developers and their projects.</p></div>
-          <a class="text-link" href="#contact">View All Builders <span>↗</span></a>
+          <a class="text-link" href="#contact">View All Builders </a>
         </div>
         <div class="builder-row">
           <button class="circle-button builder-prev" aria-label="Previous builders">‹</button>
@@ -173,22 +209,22 @@
 
     <section class="news section-space" id="news">
       <div class="container">
-        <div class="section-heading"><div><p class="eyebrow">NEWS & EVENTS</p><h2>Latest Updates</h2><p class="section-subtitle">Stay informed about our activities, events and industry developments.</p></div><a href="#contact" class="text-link">View All News <span>↗</span></a></div>
+        <div class="section-heading"><div><p class="eyebrow">NEWS & EVENTS</p><h2>Latest Updates</h2><p class="section-subtitle">Stay informed about our activities, events and industry developments.</p></div><a href="#contact" class="text-link">View All News </a></div>
         <div class="news-grid">
-          <article class="news-card"><img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80" alt="People attending a business conference"><div class="news-content"><time datetime="2024-12-12">12 Dec 2024</time><h3>CREDAI Kurnool Annual General Meeting</h3><p>Members discussed key initiatives for development and sustainable growth.</p><a href="#contact">Read More <span>↗</span></a></div></article>
-          <article class="news-card"><img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80" alt="Construction professionals at a building site"><div class="news-content"><time datetime="2024-12-05">05 Dec 2024</time><h3>Site Visit to Member Projects</h3><p>CREDAI Kurnool members visited ongoing projects to review progress and quality standards.</p><a href="#contact">Read More <span>↗</span></a></div></article>
-          <article class="news-card"><img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=800&q=80" alt="Speaker presenting at an industry event"><div class="news-content"><time datetime="2024-11-26">26 Nov 2024</time><h3>Seminar on RERA & Compliance</h3><p>Industry experts shared insights on the latest regulations and best practices.</p><a href="#contact">Read More <span>↗</span></a></div></article>
+          <article class="news-card"><img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80" alt="People attending a business conference"><div class="news-content"><time datetime="2024-12-12">12 Dec 2024</time><h3>CREDAI Kurnool Annual General Meeting</h3><p>Members discussed key initiatives for development and sustainable growth.</p><a href="#contact">Read More </a></div></article>
+          <article class="news-card"><img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80" alt="Construction professionals at a building site"><div class="news-content"><time datetime="2024-12-05">05 Dec 2024</time><h3>Site Visit to Member Projects</h3><p>CREDAI Kurnool members visited ongoing projects to review progress and quality standards.</p><a href="#contact">Read More </a></div></article>
+          <article class="news-card"><img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=800&q=80" alt="Speaker presenting at an industry event"><div class="news-content"><time datetime="2024-11-26">26 Nov 2024</time><h3>Seminar on RERA & Compliance</h3><p>Industry experts shared insights on the latest regulations and best practices.</p><a href="#contact">Read More </a></div></article>
         </div>
         <p class="content-note">Sample news content for layout demonstration. Replace with verified current CREDAI Kurnool updates before launch.</p>
       </div>
     </section>
 
-    <section class="list-cta" id="contact"><div class="container list-cta-inner"><div><p class="eyebrow eyebrow-light">FOR BUILDERS</p><h2>Showcase Your Projects with CREDAI Kurnool</h2><p>Reach genuine buyers, enhance your brand visibility and be part of a trusted platform.</p></div><a class="button button-gold" href="mailto:info@credai.org?subject=List%20a%20project">List Your Project <span>↗</span></a></div></section>
+    <section class="list-cta" id="contact"><div class="container list-cta-inner"><div><p class="eyebrow eyebrow-light">FOR BUILDERS</p><h2>Showcase Your Projects with CREDAI Kurnool</h2><p>Reach genuine buyers, enhance your brand visibility and be part of a trusted platform.</p></div><a class="button button-gold" href="mailto:info@credai.org?subject=List%20a%20project">List Your Project </a></div></section>
   </main>
 
   <footer class="footer">
     <div class="container footer-main">
-      <div class="footer-about"><a class="brand footer-brand" href="#home"><span class="brand-icon"><span></span><span></span><span></span></span><span class="brand-name">CREDAI<small>KURNOOL</small></span></a><p>A united community of real estate developers working for a better, stronger and more prosperous Kurnool.</p><div class="social-links"><a href="#contact" aria-label="Facebook">f</a><a href="#contact" aria-label="Instagram">◎</a><a href="#contact" aria-label="LinkedIn">in</a><a href="#contact" aria-label="YouTube">▶</a></div></div>
+      <div class="footer-about"><a class="brand footer-brand" href="#home"><img class="credai-logo credai-logo-footer" src="logo.png" alt="CREDAI Kurnool Chapter"></a><p>A united community of real estate developers working for a better, stronger and more prosperous Kurnool.</p><div class="social-links"><a href="#contact" aria-label="Facebook">f</a><a href="#contact" aria-label="Instagram">◎</a><a href="#contact" aria-label="LinkedIn">in</a><a href="#contact" aria-label="YouTube">▶</a></div></div>
       <div class="footer-column"><h3>Quick Links</h3><a href="#home">Home</a><a href="#projects">Explore Projects</a><a href="#builders">Member Builders</a><a href="#about">About CREDAI</a><a href="#news">News & Events</a><a href="#contact">Contact Us</a></div>
       <div class="footer-column"><h3>For Buyers</h3><a href="#projects">Search Projects</a><a href="#projects">Map View</a><a href="#projects">Project Categories</a><a href="#news">Request a Site Visit</a><a href="#contact">Download Brochure</a></div>
       <div class="footer-column"><h3>For Members</h3><a href="#builders">Membership</a><a href="#builders">Member Benefits</a><a href="#news">Events</a><a href="#news">Gallery</a></div>
