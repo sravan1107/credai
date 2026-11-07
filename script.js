@@ -227,3 +227,38 @@ document.querySelectorAll('.map-zoom button').forEach((button) => {
 
 const year = document.getElementById('year');
 if (year) year.textContent = new Date().getFullYear();
+
+
+document.querySelectorAll(".map-project-item").forEach((item) => {
+  item.addEventListener("click", function () {
+
+    const name = this.dataset.name;
+    const location = this.dataset.location;
+
+    const searchQuery = `${name}, ${location}`;
+
+    const encodedLocation = encodeURIComponent(searchQuery);
+
+    // Update embedded Google Map
+    document.getElementById("project-google-map").src =
+      `https://maps.google.com/maps?q=${encodedLocation}&z=16&output=embed`;
+
+    // Update project information
+    document.getElementById("selected-project-name").textContent = name;
+    document.getElementById("selected-project-location").textContent = location;
+
+    // Update external Google Maps links
+    document.getElementById("google-map-link").href =
+      `https://www.google.com/maps/search/?api=1&query=${encodedLocation}`;
+
+    document.getElementById("directions-link").href =
+      `https://www.google.com/maps/dir/?api=1&destination=${encodedLocation}`;
+
+    // Active selection
+    document.querySelectorAll(".map-project-item").forEach((button) => {
+      button.classList.remove("active");
+    });
+
+    this.classList.add("active");
+  });
+});

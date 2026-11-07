@@ -147,7 +147,7 @@
       <span>₹ Price on Request</span>
     </div>
     <div class="project-bottom">
-      <span class="status">Status to be Confirmed</span>
+      <span class="status">Ready to Move</span>
       <a href="#contact" class="small-button">View Project</a>
     </div>
   </div>
@@ -172,7 +172,7 @@
       <span>₹ Price on Request</span>
     </div>
     <div class="project-bottom">
-      <span class="status">Status to be Confirmed</span>
+      <span class="status">Ready to Move</span>
       <a href="#contact" class="small-button">View Project</a>
     </div>
   </div>
@@ -197,7 +197,7 @@
       <span>▦ 2,080.16 Sq. Ft.</span>
     </div>
     <div class="project-bottom">
-      <span class="status">Status to be Confirmed</span>
+      <span class="status">Ready to Move</span>
       <a href="#contact" class="small-button">View Project</a>
     </div>
   </div>
@@ -222,7 +222,7 @@
       <span>₹ Price on Request</span>
     </div>
     <div class="project-bottom">
-      <span class="status">Status to be Confirmed</span>
+      <span class="status">Ready to Move</span>
       <a href="#contact" class="small-button">View Project</a>
     </div>
   </div>
@@ -247,7 +247,7 @@
       <span>▦ 1,766.17 Sq. Ft.</span>
     </div>
     <div class="project-bottom">
-      <span class="status">Status to be Confirmed</span>
+      <span class="status">Ready to Move</span>
       <a href="#contact" class="small-button">View Project</a>
     </div>
   </div>
@@ -272,7 +272,7 @@
       <span>▦ 1,675 Sq. Ft.</span>
     </div>
     <div class="project-bottom">
-      <span class="status">Status to be Confirmed</span>
+      <span class="status">Ready to Move</span>
       <a href="#contact" class="small-button">View Project</a>
     </div>
   </div>
@@ -297,7 +297,7 @@
       <span>▦ 1,000.27 to 1,292 Sq. Ft.</span>
     </div>
     <div class="project-bottom">
-      <span class="status">Status to be Confirmed</span>
+      <span class="status">Ready to Move</span>
       <a href="#contact" class="small-button">View Project</a>
     </div>
   </div>
@@ -305,27 +305,136 @@
         </div>
         <div class="project-carousel-footer">
           <div class="project-dots" id="project-dots" aria-label="Choose a project"></div>
-          <span class="project-count" id="project-count" aria-live="polite">01 / 04</span>
         </div>
         <p class="results-message" id="results-message" aria-live="polite"></p>
       </div>
     </section>
 
-    <section class="map-section">
-      <div class="container map-layout">
-        <div class="map-panel">
-          <div class="map-controls"><button class="map-toggle active" data-view="map">Map View</button><button class="map-toggle" data-view="list">List View</button><span class="map-legend">PROJECT LOCATIONS</span></div>
-          <div class="map-canvas" id="map-canvas">
-            <div class="map-road road-one"></div><div class="map-road road-two"></div><div class="map-road road-three"></div><div class="map-river"></div>
-            <span class="map-place place-airport">✈ Kurnool Airport</span><span class="map-place place-nandyal">Nandyal Road</span><span class="map-place place-orvakal">Orvakal</span><span class="map-place place-bcamp">B-Camp</span><span class="map-place place-collector">Collector Office</span>
-            <button class="map-pin pin-one" data-project="Sree Vista Heights" aria-label="Sree Vista Heights location">⌂</button><button class="map-pin pin-two" data-project="Green Valley Villas" aria-label="Green Valley Villas location">⌂</button><button class="map-pin pin-three" data-project="Royal Enclave" aria-label="Royal Enclave location">⌂</button><button class="map-pin pin-four" data-project="Kurnool Meadows" aria-label="Kurnool Meadows location">⌂</button>
-            <div class="map-popup" id="map-popup"><strong>Sree Vista Heights</strong><small>By Sree Developers</small><a href="#projects">View project →</a></div>
-            <div class="map-zoom"><button aria-label="Zoom in">+</button><button aria-label="Zoom out">−</button></div>
-          </div>
-        </div>
-        <div class="map-copy"><p class="eyebrow">EXPLORE ON MAP</p><h2>Discover Projects<br>Across Kurnool</h2><p>Explore member projects on an interactive map. Find properties near schools, hospitals, transport and key locations.</p><a class="button button-green" href="#projects">Explore Projects </a><div class="nearby-grid"><div><span>♧</span><strong>Schools</strong><small>Nearby</small></div><div><span>✚</span><strong>Hospitals</strong><small>Nearby</small></div><div><span>▦</span><strong>Shopping</strong><small>& Lifestyle</small></div><div><span>⇄</span><strong>Transport</strong><small>Connectivity</small></div></div></div>
+   
+<section class="map-section" id="project-map">
+  <div class="container map-layout">
+
+    <div class="map-panel">
+      <div class="map-controls">
+        <span class="map-legend">CREDAI KURNOOL PROJECT LOCATIONS</span>
       </div>
-    </section>
+
+      <div class="google-map-wrapper">
+        <iframe
+          id="project-google-map"
+          src="https://maps.google.com/maps?q=Kurnool%2C%20Andhra%20Pradesh&t=&z=13&ie=UTF8&iwloc=&output=embed"
+          width="100%"
+          height="480"
+          style="border:0;"
+          allowfullscreen
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="CREDAI Kurnool project locations">
+        </iframe>
+      </div>
+
+      <div class="map-project-details">
+        <h3 id="selected-project-name">Explore CREDAI Projects</h3>
+        <p id="selected-project-location">
+          Select a project to explore its location.
+        </p>
+        <div class="map-action-links">
+          <a id="google-map-link"
+             href="https://www.google.com/maps/search/?api=1&query=Kurnool%2C%20Andhra%20Pradesh"
+             target="_blank" rel="noopener">
+            Open in Google Maps ↗
+          </a>
+
+          <a id="directions-link"
+             href="https://www.google.com/maps/dir/?api=1&destination=Kurnool%2C%20Andhra%20Pradesh"
+             target="_blank" rel="noopener">
+            Get Directions →
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="map-copy">
+      <p class="eyebrow">EXPLORE ON MAP</p>
+      <h2>Discover Projects<br>Across Kurnool</h2>
+
+      <p>
+        Explore residential projects from CREDAI Kurnool member
+        developers. Select a project to view its location on Google Maps.
+      </p>
+
+      <div class="map-project-list">
+
+        <button class="map-project-item active"
+          data-name="Aaryani Iconic Towers"
+          data-location="Venkatadri Nagar, Beside Regional Vigilance Office, Kurnool">
+          <span class="map-project-number">01</span>
+          <span><strong>Aaryani Iconic Towers</strong><small>Venkatadri Nagar</small></span>
+          <span class="map-arrow">↗</span>
+        </button>
+
+        <button class="map-project-item"
+          data-name="Dhanvin Residency"
+          data-location="Road No. 3, Venkata Ramana Colony, Kurnool">
+          <span class="map-project-number">02</span>
+          <span><strong>Dhanvin Residency</strong><small>Venkata Ramana Colony</small></span>
+          <span class="map-arrow">↗</span>
+        </button>
+
+        <button class="map-project-item"
+          data-name="Indrakeeladri Residency"
+          data-location="Road 4, Ramalingeshwara Nagar, Kurnool">
+          <span class="map-project-number">03</span>
+          <span><strong>Indrakeeladri Residency</strong><small>Ramalingeshwara Nagar</small></span>
+          <span class="map-arrow">↗</span>
+        </button>
+
+        <button class="map-project-item"
+          data-name="Mahanya Residency"
+          data-location="Sita Rama Nagar, Kurnool">
+          <span class="map-project-number">04</span>
+          <span><strong>Mahanya Residency</strong><small>Sita Rama Nagar</small></span>
+          <span class="map-arrow">↗</span>
+        </button>
+
+        <button class="map-project-item"
+          data-name="Padma Sri Deluxe Residency"
+          data-location="Ashok Nagar, Beside Municipal Park, Kurnool">
+          <span class="map-project-number">05</span>
+          <span><strong>Padma Sri Residency</strong><small>Ashok Nagar</small></span>
+          <span class="map-arrow">↗</span>
+        </button>
+
+        <button class="map-project-item"
+          data-name="Panchajanya Iconic Towers"
+          data-location="Road No. 4, Venkata Ramana Colony, Kurnool">
+          <span class="map-project-number">06</span>
+          <span><strong>Panchajanya Iconic Towers</strong><small>Venkata Ramana Colony</small></span>
+          <span class="map-arrow">↗</span>
+        </button>
+
+        <button class="map-project-item"
+          data-name="Sindhu Residency"
+          data-location="SBI Colony, Sitarama Nagar, Kurnool">
+          <span class="map-project-number">07</span>
+          <span><strong>Sindhu Residency</strong><small>SBI Colony</small></span>
+          <span class="map-arrow">↗</span>
+        </button>
+
+        <button class="map-project-item"
+          data-name="Tridha Residency"
+          data-location="Ramalingeshwara Nagar, Kurnool">
+          <span class="map-project-number">08</span>
+          <span><strong>Tridha Residency</strong><small>Ramalingeshwara Nagar</small></span>
+          <span class="map-arrow">↗</span>
+        </button>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
 
     <section class="builders section-space" id="builders">
       <div class="container">
@@ -335,12 +444,7 @@
         </div>
         <div class="builder-row">
           <button class="circle-button builder-prev" aria-label="Previous builders">‹</button>
-          <div class="builder-logo"><span class="logo-symbol blue">▲</span><strong>SREE<small>DEVELOPERS</small></strong></div>
-          <div class="builder-logo"><span class="logo-symbol gold">✺</span><strong>Sai Priya<small>Builders</small></strong></div>
-          <div class="builder-logo"><span class="logo-symbol red">▥</span><strong>VARDHAN<small>DEVELOPERS</small></strong></div>
-          <div class="builder-logo"><span class="logo-symbol orange">◆</span><strong>ABC<small>CONSTRUCTIONS</small></strong></div>
-          <div class="builder-logo"><span class="logo-symbol navy">▥</span><strong>SRINIVASA<small>INFRA</small></strong></div>
-          <div class="builder-logo"><span class="logo-symbol rust">◉</span><strong>LAKSHMI<small>CONSTRUCTIONS</small></strong></div>
+          <div class="builder-logo"><span class="logo-symbol blue">▲</span><strong>INDRAKEELADRI<small>CONSTRUCTIONS</small></strong></div>
           <button class="circle-button builder-next" aria-label="Next builders">›</button>
         </div>
       </div>

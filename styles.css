@@ -946,7 +946,7 @@ button,select {
 
 .photo-five {
 
-    background-image:url("/Assets/Padma_Sri_Deluxe_Residency.jpg");
+    background-image:url("/Assets/Padma_Sri_Residency.jpg");
 
 }
 
@@ -2932,3 +2932,114 @@ button,select {
         max-height: 56px;
     }
 }
+
+
+.google-map-wrapper {
+  width: 100%;
+  height: 480px;
+  overflow: hidden;
+  border-radius: 14px;
+  background: #f1f1f1;
+}
+
+.google-map-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.map-project-details {
+  padding: 18px 20px;
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 0 0 12px 12px;
+}
+
+.map-project-details h3 {
+  margin: 0 0 6px;
+  font-size: 19px;
+}
+
+.map-project-details p {
+  color: #777;
+  margin: 0 0 14px;
+  font-size: 14px;
+}
+
+.map-action-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.map-action-links a {
+  color: #08654f;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.map-project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.map-project-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid #e8e8e8;
+  border-radius: 9px;
+  background: #fff;
+  text-align: left;
+  cursor: pointer;
+  transition: background .2s, border-color .2s;
+}
+
+.map-project-item:hover,
+.map-project-item.active {
+  background: #edf5f1;
+  border-color: #08654f;
+}
+
+.map-project-number {
+  color: #08654f;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.map-project-item strong,
+.map-project-item small {
+  display: block;
+}
+
+.map-project-item strong {
+  color: #222;
+  font-size: 13px;
+}
+
+.map-project-item small {
+  color: #777;
+  font-size: 11px;
+  margin-top: 4px;
+}
+
+.map-arrow {
+  margin-left: auto;
+  color: #08654f;
+}
+
+@media (max-width: 768px) {
+  .google-map-wrapper {
+    height: 330px;
+  }
+
+  .map-action-links {
+    gap: 12px;
+  }
+}
+
