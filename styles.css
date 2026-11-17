@@ -300,7 +300,9 @@ button,select {
 
     inset:0;
 
-    z-index:-2;   
+    z-index:-2;
+
+    background-image:url("https://raw.githubusercontent.com/sravan1107/credai/refs/heads/main/Assets/CredaiHome.PNG?auto=format&fit=crop&w=2000&q=85");
 
     background-size:cover;
 
