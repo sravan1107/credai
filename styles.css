@@ -300,9 +300,7 @@ button,select {
 
     inset:0;
 
-    z-index:-2;
-
-    background-image:url("/Assets/CredaiHome.png?auto=format&fit=crop&w=2000&q=85");
+    z-index:-2;   
 
     background-size:cover;
 
